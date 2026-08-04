@@ -188,6 +188,65 @@
       padding:22px;
     }
 
+    .tutorial-video{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:18px;
+      padding:15px;
+      border:1px solid rgba(236,72,153,.28);
+      border-radius:18px;
+      color:#fff;
+      text-decoration:none;
+      background:linear-gradient(135deg,rgba(236,72,153,.12),rgba(6,182,212,.08));
+      transition:.25s ease;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .tutorial-video::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);
+      transform:translateX(-100%);
+      transition:.55s ease;
+    }
+
+    .tutorial-video:hover{
+      transform:translateY(-2px);
+      border-color:rgba(236,72,153,.5);
+      box-shadow:0 14px 32px rgba(236,72,153,.13);
+    }
+
+    .tutorial-video:hover::before{transform:translateX(100%);}
+
+    .tutorial-video-left{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      position:relative;
+      z-index:1;
+    }
+
+    .tutorial-video-icon{
+      width:46px;
+      height:46px;
+      flex:0 0 46px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:#050505;
+      font-size:22px;
+      box-shadow:0 8px 22px rgba(0,0,0,.32);
+    }
+
+    .tutorial-video-title{font-size:12px;font-weight:800;margin-bottom:4px;}
+    .tutorial-video-desc{font-size:9px;color:#94a3b8;line-height:1.45;}
+    .tutorial-video-arrow{position:relative;z-index:1;color:#f472b6;transition:.2s ease;}
+    .tutorial-video:hover .tutorial-video-arrow{transform:translateX(3px);}
+
     .guide{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -608,6 +667,28 @@
       </section>
 
       <section class="content">
+        <a
+          href="https://vt.tiktok.com/ZS45dWrTy/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tutorial-video"
+        >
+          <div class="tutorial-video-left">
+            <div class="tutorial-video-icon">
+              <i class="fab fa-tiktok"></i>
+            </div>
+
+            <div>
+              <div class="tutorial-video-title">Video hướng dẫn lấy Eat Token</div>
+              <div class="tutorial-video-desc">
+                Nhấn vào đây để xem hướng dẫn đầy đủ trên TikTok
+              </div>
+            </div>
+          </div>
+
+          <i class="fas fa-arrow-right tutorial-video-arrow"></i>
+        </a>
+
         <div class="guide">
           <div class="guide-item">
             <div class="guide-num">1</div>
